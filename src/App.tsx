@@ -1,6 +1,6 @@
 import './App.css'
 import HeaderBar from "./components/navigation/HeaderBar.tsx";
-import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
+import {BrowserRouter, BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
 import CustomOrderScreen from "./components/screens/CustomOrderScreen.tsx";
 import HomeScreen from "./components/screens/HomeScreen.tsx";
 import Footer from "./components/navigation/Footer.tsx";
@@ -24,25 +24,27 @@ const ScrollToTop = () => {
 
 function App() {
     return (
-        <Router>
-            <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
-                <ScrollToTop/>
-                <HeaderBar/>
-                <Box sx={{flex: '1 1 auto', display: 'flex', flexDirection: 'column'}}>
-                    <Routes>
-                        <Route path="/" element={<HomeScreen/>}/>
-                        <Route path="/design" element={<CustomOrderScreen/>}/>
-                        <Route path="/blinds" element={<BlindsScreen/>}/>
-                        <Route path="/curtains" element={<CurtainsScreen/>}/>
-                        <Route path="/shutters" element={<ShuttersScreen/>}/>
-                        <Route path="/externals" element={<ExternalsScreen/>}/>
-                        <Route path="/motorisation" element={<MotorisationScreen/>}/>
-                        {/*<Route path="/contact" element={<CurtainsScreen/>}/>*/}
-                    </Routes>
+        <BrowserRouter basename="/shadelight-website">
+            <Router>
+                <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+                    <ScrollToTop/>
+                    <HeaderBar/>
+                    <Box sx={{flex: '1 1 auto', display: 'flex', flexDirection: 'column'}}>
+                        <Routes>
+                            <Route path="/" element={<HomeScreen/>}/>
+                            <Route path="/design" element={<CustomOrderScreen/>}/>
+                            <Route path="/blinds" element={<BlindsScreen/>}/>
+                            <Route path="/curtains" element={<CurtainsScreen/>}/>
+                            <Route path="/shutters" element={<ShuttersScreen/>}/>
+                            <Route path="/externals" element={<ExternalsScreen/>}/>
+                            <Route path="/motorisation" element={<MotorisationScreen/>}/>
+                            {/*<Route path="/contact" element={<CurtainsScreen/>}/>*/}
+                        </Routes>
+                    </Box>
+                    <Footer/>
                 </Box>
-                <Footer/>
-            </Box>
-        </Router>
+            </Router>
+        </BrowserRouter>
     )
 }
 
