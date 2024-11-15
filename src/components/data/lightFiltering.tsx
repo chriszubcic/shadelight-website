@@ -1,13 +1,14 @@
 import VividLightFiltering from "./vividLightFiltering.tsx";
 import {CustomFurnishingTypeProps} from "../custom/CustomFurnishingType.tsx";
 
+import blindImg from "../images/light_filtering.png"
 
 // Define a class that uses the interface
 class LightFiltering {
     private static _lightfiltering: CustomFurnishingTypeProps = {
         title: "Light Filtering",
         id: "lightfiltering",
-        image: "src/components/images/light_filtering.png",
+        image: blindImg,
         description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
         fabrics: [VividLightFiltering],
         minPrice: 100

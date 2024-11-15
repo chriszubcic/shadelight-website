@@ -13,7 +13,7 @@ export interface CustomFurnishingTypeProps {
     description: string;
     fabrics: CustomFabricProps[];
     minPrice: number;
-    priceGroup: number;
+    // priceGroup: number;
 }
 
 export interface CustomDualFurnishingTypeStateProps extends CustomFurnishingTypeProps {
@@ -25,11 +25,11 @@ interface CustomFurnishingTypeComponentProps extends CustomFurnishingTypeProps {
     onSelect: (furnishingType: CustomFurnishingTypeProps) => void;
 }
 
-const CustomFurnishingType = ({id, image, minPrice, title, description, isSelected, onSelect, fabrics, priceGroup}: CustomFurnishingTypeComponentProps) => {
+const CustomFurnishingType = ({id, image, minPrice, title, description, isSelected, onSelect, fabrics}: CustomFurnishingTypeComponentProps) => {
     const transparentBorder = alpha(Colours.sl_secondary, 0.5);
 
     const handleClick = () => {
-        onSelect({id, image, minPrice, title, description, fabrics, priceGroup});
+        onSelect({id, image, minPrice, title, description, fabrics});
     };
 
     return (

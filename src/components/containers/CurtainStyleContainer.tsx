@@ -3,6 +3,8 @@ import CustomContainerHeading from "../custom/CustomContainerHeading.tsx";
 import {CustomOptionProps} from "../custom/CustomOptionCard.tsx";
 import CurtainStyleCard from "../custom/CurtainStyleCard.tsx";
 
+import optionImg from "../images/white_winder.png";
+
 interface CurtainStyleContainerProps {
     selectedCurtainStyle: CustomOptionProps | null;
     onSelect: (curtainStyle: CustomOptionProps) => void;
@@ -13,8 +15,8 @@ function CurtainStyleContainer({selectedCurtainStyle, onSelect}: CurtainStyleCon
     const heading = 'Furnishing Style';
 
     const curtainStyles: CustomOptionProps[] = [
-        {image: 'front_roll.png', title: 'Pulling', id: 'pulling', price: null},
-        {image: 'back_roll.png', title: 'Off floor', id: 'offfloor', price: null},
+        {image: optionImg, title: 'Pulling', id: 'pulling', price: null},
+        {image: optionImg, title: 'Off floor', id: 'offfloor', price: null},
     ];
 
     return (

@@ -3,6 +3,8 @@ import CustomContainerHeading from "../custom/CustomContainerHeading.tsx";
 import {CustomOptionProps} from "../custom/CustomOptionCard.tsx";
 import CurtainFittingCard from "../custom/CurtainFittingCard.tsx";
 
+import optionImg from "../images/white_winder.png";
+
 interface CurtainFittingContainerProps {
     selectedFitting: CustomOptionProps | null;
     onSelect: (curtainFitting: CustomOptionProps) => void;
@@ -13,8 +15,8 @@ function CurtainFittingContainer({selectedFitting, onSelect}: CurtainFittingCont
     const heading = 'Fitting';
 
     const curtainFittings: CustomOptionProps[] = [
-        {image: 'front_roll.png', title: 'Face Fix', id: 'facefix', price: null},
-        {image: 'back_roll.png', title: 'Top Fix', id: 'topfix', price: null},
+        {image: optionImg, title: 'Face Fix', id: 'facefix', price: null},
+        {image: optionImg, title: 'Top Fix', id: 'topfix', price: null},
     ];
 
     return (

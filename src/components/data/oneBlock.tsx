@@ -1,10 +1,12 @@
 import {CustomFabricProps} from "../custom/CustomFabricCard.tsx";
 
+import fabricImg from '../images/fabric_pattern.png'
+
 class OneBlock {
     private static one_block: CustomFabricProps = {
         title: "One",
         id: "one_block",
-        image: 'src/components/images/fabric_pattern.png',
+        image: fabricImg,
         description: "",
         colours: [
             {id: 0, color: '#F1F1E5', name: 'Ivory', value: 1},

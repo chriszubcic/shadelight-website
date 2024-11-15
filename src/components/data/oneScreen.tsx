@@ -1,10 +1,12 @@
 import {CustomFabricProps} from "../custom/CustomFabricCard.tsx";
 
+import fabricImg from '../images/matrix_pattern.png'
+
 class OneScreen {
     private static one_screen: CustomFabricProps = {
         id: "one_screen",
         title: "One",
-        image: 'src/components/images/matrix_pattern.png',
+        image: fabricImg,
         description: "",
         colours: [
             {id: 0, color: '#EAE7DC', name: 'Linen', value: 1},

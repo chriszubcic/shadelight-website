@@ -3,13 +3,14 @@ import VividBlock from "./vividBlock.tsx";
 import OneBlock from "./oneBlock.tsx";
 import {CustomFurnishingTypeProps} from "../custom/CustomFurnishingType.tsx";
 
+import blindImg from "../images/blockout_blind.png"
 
 // Define a class that uses the interface
 class Blockout {
     private static _blockout: CustomFurnishingTypeProps = {
         title: "Blockout",
         id: "blockout",
-        image: "src/components/images/blockout_blind.png",
+        image: blindImg,
         description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
         fabrics: [VibeBlock, VividBlock, OneBlock],
         minPrice: 100

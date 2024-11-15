@@ -3,6 +3,8 @@ import CustomContainerHeading from "../custom/CustomContainerHeading.tsx";
 import RollDirectionCard from "../custom/RollDirectionCard.tsx";
 import {CustomOptionProps} from "../custom/CustomOptionCard.tsx";
 
+import optionImg from "../images/white_winder.png";
+
 interface RollDirectionContainerProps {
     selectedRollDirection: CustomOptionProps | null;
     onSelect: (rollDirection: CustomOptionProps) => void;
@@ -13,8 +15,8 @@ function RollDirectionContainer({selectedRollDirection, onSelect}: RollDirection
     const heading = 'Roll Direction';
 
     const rollDirections: CustomOptionProps[] = [
-        {image: 'front_roll.png', title: 'Front Roll', id: 'fr', price: null},
-        {image: 'back_roll.png', title: 'Back Roll', id: 'br', price: null},
+        {image: optionImg, title: 'Front Roll', id: 'fr', price: null},
+        {image: optionImg, title: 'Back Roll', id: 'br', price: null},
     ];
 
     return (

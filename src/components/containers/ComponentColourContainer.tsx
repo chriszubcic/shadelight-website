@@ -3,6 +3,8 @@ import CustomContainerHeading from "../custom/CustomContainerHeading.tsx";
 import ComponentColourCard from "../custom/ComponentColourCard.tsx";
 import {CustomOptionProps} from "../custom/CustomOptionCard.tsx";
 
+import optionImg from "../images/white_winder.png";
+
 interface ComponentColourContainerProps {
     selectedComponentColour: CustomOptionProps | null;
     onSelect: (componentColour: CustomOptionProps) => void;
@@ -13,8 +15,8 @@ function ComponentColourContainer({selectedComponentColour, onSelect}: Component
     const heading = 'Components Colour';
 
     const componentColours: CustomOptionProps[] = [
-        {image: 'black_winder.png', title: 'Black', id: 'bw', price: null},
-        {image: 'white_winder.png', title: 'White', id: 'ww', price: null}
+        {image: optionImg, title: 'Black', id: 'bw', price: null},
+        {image: optionImg, title: 'White', id: 'ww', price: null}
     ]
 
     return (

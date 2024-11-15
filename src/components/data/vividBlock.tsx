@@ -1,10 +1,12 @@
 import {CustomFabricProps} from "../custom/CustomFabricCard.tsx";
 
+import fabricImg from '../images/kew_pattern.png'
+
 class VividBlock {
     private static vivid_block: CustomFabricProps = {
         title: "Vivid",
         id: "vivid_block",
-        image: 'src/components/images/kew_pattern.png',
+        image: fabricImg,
         description: "",
         colours: [
             {id: 0, color: '#EAE7DC', name: 'Linen', value: 1},

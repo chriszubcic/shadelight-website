@@ -1,10 +1,12 @@
 import {CustomFabricProps} from "../custom/CustomFabricCard.tsx";
 
+import fabricImg from '../images/matrix_pattern.png'
+
 class VividLightFiltering {
     private static vivid_lightfiltering: CustomFabricProps = {
         id: "vivid_lightfiltering",
         title: "Vivid",
-        image: 'src/components/images/matrix_pattern.png',
+        image: fabricImg,
         description: "",
         colours: [
             {id: 0, color: '#EAE7DC', name: 'Linen', value: 1},

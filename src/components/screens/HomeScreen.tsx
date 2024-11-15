@@ -5,10 +5,12 @@ import {Colours} from "../styling/colours.tsx";
 import {useRef, useEffect, useState} from "react";
 import PlaceIcon from '@mui/icons-material/Place';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import logoImage from '../images/shadelightlogoblack.png';
 import HomeFurnishingCardsSmall from "../custom/HomeFurnishingCardsSmall.tsx";
 import HomeFurnishingCardsLarge from "../custom/HomeFurnishingCardsLarge.tsx";
 import HomeNavigationGrid from "../custom/HomeNavigationGrid.tsx";
+
+import logoImage from '../images/shadelightlogoblack.png';
+import shadelightLogoWhite from '../images/shadelightlogowhite.png';
 
 // Custom hook for scroll animations
 const useScrollAnimation = (threshold = 0.2) => {
@@ -93,7 +95,7 @@ function HomeScreen() {
             <section className="hero">
                 <div className="overlay">
                     <img
-                        src="src/components/images/shadelightlogowhite.png"
+                        src={shadelightLogoWhite}
                         alt="Logo"
                         className="logo"
                         style={{

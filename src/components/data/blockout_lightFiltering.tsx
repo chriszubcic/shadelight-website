@@ -2,13 +2,14 @@ import {CustomDualFurnishingTypeStateProps} from "../custom/CustomFurnishingType
 import lightFiltering from "./lightFiltering.tsx";
 import blockout from "./blockout.tsx";
 
+import blindImg from "../images/blockout_blind.png"
 
 // Define a class that uses the interface
 class DualBlockoutLightFiltering {
     private static _dualBlockoutLightFiltering: CustomDualFurnishingTypeStateProps = {
         title: "Blockout & Light Filtering",
         id: "blockout_lightfiltering",
-        image: "src/components/images/blockout_blind.png",
+        image: blindImg,
         description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
         fabrics: blockout.fabrics,
         fabrics_secondary: lightFiltering.fabrics,

@@ -3,6 +3,8 @@ import CustomContainerHeading from "../custom/CustomContainerHeading.tsx";
 import {CustomOptionProps} from "../custom/CustomOptionCard.tsx";
 import CurtainControlCard from "../custom/CurtainControlCard.tsx";
 
+import optionImg from "../images/white_winder.png";
+
 interface CurtainControlContainerProps {
     selectedControl: CustomOptionProps | null;
     onSelect: (curtainControl: CustomOptionProps) => void;
@@ -13,8 +15,8 @@ function CurtainControlContainer({selectedControl, onSelect}: CurtainControlCont
     const heading = 'Control';
 
     const curtainControls: CustomOptionProps[] = [
-        {image: 'front_roll.png', title: 'No Wand', id: 'nowand', price: null},
-        {image: 'back_roll.png', title: 'Wand', id: 'wand', price: null},
+        {image: optionImg, title: 'No Wand', id: 'nowand', price: null},
+        {image: optionImg, title: 'Wand', id: 'wand', price: null},
     ];
 
     return (

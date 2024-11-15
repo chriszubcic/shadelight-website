@@ -2,13 +2,13 @@ import {CustomDualFurnishingTypeStateProps} from "../custom/CustomFurnishingType
 import sunscreen from "./sunscreen.tsx";
 import lightFiltering from "./lightFiltering.tsx";
 
+import blindImg from "../images/blockout_blind.png"
 
-// Define a class that uses the interface
 class DualLightFilteringSunscreen {
     private static _dualLightFilteringSunscreen: CustomDualFurnishingTypeStateProps = {
         title: "Light Filtering & Sunscreen",
         id: "lightFiltering_sunscreen",
-        image: "src/components/images/blockout_blind.png",
+        image: blindImg,
         description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
         fabrics: lightFiltering.fabrics,
         fabrics_secondary: sunscreen.fabrics,

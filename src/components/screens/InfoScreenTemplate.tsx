@@ -10,6 +10,8 @@ import {CustomFurnishingTypeProps} from "../custom/CustomFurnishingType.tsx";
 import InfoQuickQuote from "../custom/InfoQuickQuote.tsx";
 import {Link} from 'react-router-dom';
 
+import blindsImage from '../images/blockout_blind.png';
+
 interface InfoScreenTemplateProps {
     title: string;
     description: string;
@@ -102,7 +104,7 @@ function InfoScreenTemplate({title, description, furnishingTypes}: InfoScreenTem
                             <Grid item xs={6} sm={8}>
                                 <Box
                                     component="img"
-                                    src="src/components/images/blockout_blind.png"
+                                    src={blindsImage}
                                     sx={{
                                         width: '100%',
                                         height: '100%',
@@ -114,7 +116,7 @@ function InfoScreenTemplate({title, description, furnishingTypes}: InfoScreenTem
                             <Grid item xs={6} sm={4} sx={{gridRow: 'span 2'}}>
                                 <Box
                                     component="img"
-                                    src="src/components/images/blockout_blind.png"
+                                    src={blindsImage}
                                     sx={{
                                         width: '100%',
                                         height: '100%',
@@ -125,7 +127,7 @@ function InfoScreenTemplate({title, description, furnishingTypes}: InfoScreenTem
                             <Grid item xs={4}>
                                 <Box
                                     component="img"
-                                    src="src/components/images/blockout_blind.png"
+                                    src={blindsImage}
                                     sx={{
                                         width: '100%',
                                         height: '100%',
@@ -137,7 +139,7 @@ function InfoScreenTemplate({title, description, furnishingTypes}: InfoScreenTem
                             <Grid item xs={8}>
                                 <Box
                                     component="img"
-                                    src="src/components/images/blockout_blind.png"
+                                    src={blindsImage}
                                     sx={{
                                         width: '100%',
                                         height: '100%',

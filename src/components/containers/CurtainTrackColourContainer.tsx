@@ -8,13 +8,15 @@ interface CurtainTrackColourContainerProps {
     onSelect: (curtainTrackColour: CustomOptionProps) => void;
 }
 
+import optionImg from "../images/white_winder.png";
+
 function CurtainTrackColourContainer({selectedTrackColour, onSelect}: CurtainTrackColourContainerProps) {
     const heading_no = '8';
     const heading = 'Track Colour';
 
     const curtainTrackColours: CustomOptionProps[] = [
-        {image: 'front_roll.png', title: 'Black', id: 'blacktrack', price: null},
-        {image: 'back_roll.png', title: 'White', id: 'whitetrack', price: null},
+        {image: optionImg, title: 'Black', id: 'blacktrack', price: null},
+        {image: optionImg, title: 'White', id: 'whitetrack', price: null},
     ];
 
     return (

@@ -3,6 +3,8 @@ import CustomContainerHeading from "../custom/CustomContainerHeading.tsx";
 import {CustomOptionProps} from "../custom/CustomOptionCard.tsx";
 import CurtainFinishCard from "../custom/CurtainFinishCard.tsx";
 
+import optionImg from "../images/white_winder.png";
+
 interface CurtainFinishContainerProps {
     selectedFinish: CustomOptionProps | null;
     onSelect: (curtainFinish: CustomOptionProps) => void;
@@ -13,9 +15,9 @@ function CurtainFinishContainer({selectedFinish, onSelect}: CurtainFinishContain
     const heading = 'Curtain Finish';
 
     const curtainFinishes: CustomOptionProps[] = [
-        {image: 'front_roll.png', title: 'Gathered', id: 'gath', price: null},
-        {image: 'back_roll.png', title: 'S-Fold', id: 'sfold', price: null},
-        {image: 'back_roll.png', title: 'Wave', id: 'wave', price: null},
+        {image: optionImg, title: 'Gathered', id: 'gath', price: null},
+        {image: optionImg, title: 'S-Fold', id: 'sfold', price: null},
+        {image: optionImg, title: 'Wave', id: 'wave', price: null},
     ];
 
     return (

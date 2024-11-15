@@ -1,10 +1,12 @@
 import {CustomFabricProps} from "../custom/CustomFabricCard.tsx";
 
+import fabricImg from '../images/matrix_pattern.png'
+
 class VibeBlock {
     private static vibe_block: CustomFabricProps = {
         id: "vibe_block",
         title: "Vibe",
-        image: 'src/components/images/matrix_pattern.png',
+        image: fabricImg,
         description: "",
         colours: [
             {id: 0, color: '#D2CFC4', name: 'Oyster', value: 1},

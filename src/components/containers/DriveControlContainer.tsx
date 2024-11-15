@@ -3,6 +3,8 @@ import CustomContainerHeading from "../custom/CustomContainerHeading.tsx";
 import {CustomOptionProps} from "../custom/CustomOptionCard.tsx";
 import DriveControlCard from "../custom/DriveControlCard.tsx";
 
+import optionImg from "../images/white_winder.png";
+
 interface DriveControlContainerProps {
     selectedDriveControl: CustomOptionProps | null;
     onSelect: (driveControl: CustomOptionProps) => void;
@@ -13,8 +15,8 @@ function DriveControlContainer({selectedDriveControl, onSelect}: DriveControlCon
     const heading = 'Drive Control';
 
     const driveControls: CustomOptionProps[] = [
-        {image: 'chain_drive.png', title: 'Chain', id: 'cc', price: null},
-        {image: 'motor_control.png', title: 'Motor', id: 'mc', price: 500}
+        {image: optionImg, title: 'Chain', id: 'cc', price: null},
+        {image: optionImg, title: 'Motor', id: 'mc', price: 500}
     ]
 
     return (

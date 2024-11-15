@@ -1,13 +1,14 @@
 import OneScreen from "./oneScreen.tsx";
 import {CustomFurnishingTypeProps} from "../custom/CustomFurnishingType.tsx";
 
+import blindImg from "../images/sunscreen_blind.png"
 
 // Define a class that uses the interface
 class Sunscreen {
     private static _sunscreen: CustomFurnishingTypeProps = {
         title: "Sunscreen",
         id: "sunscreen",
-        image: "src/components/images/sunscreen_blind.png",
+        image: blindImg,
         description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
         fabrics: [OneScreen],
         minPrice: 100
