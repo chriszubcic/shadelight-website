@@ -1,0 +1,43 @@
+/* Hero section with image and dark overlay */
+.hero {
+    position: relative;
+    margin-top: 75px;
+    width: 100vw;
+    height: 85vh; /* Adjust the height as needed */
+    background-image: url('src/components/images/home_backdrop.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.logo {
+    max-width: 40vw; /* Adjust logo size */
+    min-width: 330px;
+    height: auto;
+}
+
+/* Content section */
+.content {
+    margin-top: 15vh;
+    margin-right: 10vw;
+    padding-left: 10vw;
+    margin-bottom: 15vh;
+}
+
+.grid-section {
+    margin-top: 15vh;
+    width: 100%;
+}

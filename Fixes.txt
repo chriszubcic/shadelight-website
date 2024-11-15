@@ -1,0 +1,30 @@
+Footer
+- Requires design
+
+Nav Drawer
+- Contact Us refactor (design required)
+- Add routing
+
+Fabric
+- Connect descriptions to modals
+
+Colour Wheel
+- Fix on hover label
+- Fix selected colour display
+
+Measurements
+- Add rename ability?
+
+Order Summary
+- Make dynamic
+- Calculate price
+
+Generate Order Form
+- Create modal
+
+https://66c96d9c882f3d7f08c73703--astonishing-sprinkles-baac21.netlify.app/
+
+
+
+
+

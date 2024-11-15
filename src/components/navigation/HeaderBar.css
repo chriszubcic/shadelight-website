@@ -1,0 +1,38 @@
+/* Styles for the ListItemButton */
+.list-item-button {
+    color: #ffffff; /* Colours.white */
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease; /* Optional: Change text color on hover */
+}
+
+/* Styles for the text container */
+.list-item-text-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Animation effect */
+.list-item-text-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Initially not visible */
+    height: 2px;
+    background-color: #ffffff; /* Colours.sl_white */
+    transition: width 0.3s ease;
+}
+
+/* Trigger animation on hover of ListItemButton */
+.list-item-button:hover .list-item-text-container::after {
+    width: 100%;
+}
+
+/* Optional: Style for contact-button */
+.contact-button {
+    color: #ffffff;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+}
