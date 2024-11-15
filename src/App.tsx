@@ -24,7 +24,7 @@ const ScrollToTop = () => {
 
 function App() {
     return (
-        <HashRouter basename="/shadelight-website">
+        <HashRouter>
                 <Box sx={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
                     <ScrollToTop/>
                     <HeaderBar/>
