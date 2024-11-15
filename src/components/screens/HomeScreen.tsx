@@ -11,6 +11,7 @@ import HomeNavigationGrid from "../custom/HomeNavigationGrid.tsx";
 
 import logoImage from '../images/shadelightlogoblack.png';
 import shadelightLogoWhite from '../images/shadelightlogowhite.png';
+import bgImage from '../images/home_backdrop.png'
 
 // Custom hook for scroll animations
 const useScrollAnimation = (threshold = 0.2) => {
@@ -92,7 +93,7 @@ function HomeScreen() {
 
     return (
         <>
-            <section className="hero">
+            <section className="hero" style={{backgroundImage: `url(${bgImage})`}}>
                 <div className="overlay">
                     <img
                         src={shadelightLogoWhite}
