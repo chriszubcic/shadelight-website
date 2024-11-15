@@ -5,8 +5,16 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PlaceIcon from '@mui/icons-material/Place';
 import {Colours} from "../styling/colours.tsx";
+import {useNavigate} from "react-router-dom";
+import './Footer.css'
 
 const Footer = () => {
+    const navigate = useNavigate();
+
+    const handleNavigation = (path: string) => {
+        navigate(path);
+    };
+
     return (
         <Box
             sx={{
@@ -32,13 +40,31 @@ const Footer = () => {
                         Quick Links
                     </Typography>
                     <Typography variant="body2" sx={{paddingLeft: {xs: 2, sm: 0}}}>
-                        <Link href="/" color="inherit" underline="hover">Home</Link><br/>
-                        <Link href="/blinds" color="inherit" underline="hover">Roller Blinds</Link><br/>
-                        <Link href="/curtains" color="inherit" underline="hover">Curtains</Link><br/>
-                        <Link href="/shutters" color="inherit" underline="hover">Shutters</Link><br/>
-                        <Link href="/externals" color="inherit" underline="hover">Externals</Link><br/>
-                        <Link href="/motorisation" color="inherit" underline="hover">Motorisation</Link><br/>
-                        <Link href="/contact" color="inherit" underline="hover">Contact Us</Link>
+                        <div
+                            className={"link"}
+                            onClick={() => handleNavigation("/")}
+                            style={{cursor: "pointer"}}
+                        >
+                            Home
+                        </div>
+                        <div className={"link"} onClick={() => handleNavigation("/blinds")}>
+                            Roller Blinds
+                        </div>
+                        <div className={"link"} onClick={() => handleNavigation("/curtains")}>
+                            Curtains
+                        </div>
+                        <div className={"link"} onClick={() => handleNavigation("/shutters")}>
+                            Shutters
+                        </div>
+                        <div className={"link"} onClick={() => handleNavigation("/externals")}>
+                            Externals
+                        </div>
+                        <div className={"link"} onClick={() => handleNavigation("/motorisation")}>
+                            Motorisation
+                        </div>
+                        <div className={"link"} onClick={() => handleNavigation("/contact")}>
+                            Contact Us
+                        </div>
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={4}>

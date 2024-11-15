@@ -9,6 +9,8 @@ import {Drawer, List, ListItem, ListItemButton, ListItemText} from "@mui/materia
 import {Colours} from "../styling/colours.tsx";
 import './HeaderBar.css'; // Import the CSS file
 
+import logoImg from '../images/shadelightlogowhite.png'
+
 export default function HeaderBar() {
     const [open, setOpen] = React.useState(false);
     const navigate = useNavigate();
@@ -81,7 +83,7 @@ export default function HeaderBar() {
                         {DrawerList}
                     </Drawer>
                     <Box sx={{flexGrow: 1}}/>
-                    <Box component="img" src="shadelightlogowhite.png" alt="Logo"
+                    <Box component="img" src={logoImg} alt="Logo"
                          sx={{height: 30, display: 'flex', justifyContent: 'flex-end', cursor: 'pointer'}}
                          onClick={() => navigate('/')}
                     />
