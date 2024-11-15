@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - main  # Trigger deployment on push to 'main' branch
 
 jobs:
   build:
@@ -14,11 +14,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Specify the version of Node.js (change as necessary)
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          cache: 'true'  # Cache dependencies to speed up future builds
 
       - name: Build project
         run: npm run build
@@ -33,9 +37,12 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'  # Only deploy when pushing to the 'main' branch
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
@@ -46,4 +53,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist  # Publish the 'dist' directory to GitHub Pages
