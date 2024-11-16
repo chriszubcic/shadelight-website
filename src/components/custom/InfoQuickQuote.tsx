@@ -18,6 +18,7 @@ function InfoQuickQuote({title, furnishingTypes}: InfoQuickQuoteProps) {
     const [width, setWidth] = useState(0);
     const [drop, setDrop] = useState(0);
 
+    // TODO - remove hardcoded values
     const minWidth = 610;
     const maxWidth = 3010;
     const minDrop = 600;
@@ -44,8 +45,8 @@ function InfoQuickQuote({title, furnishingTypes}: InfoQuickQuoteProps) {
     };
 
     // State for storing the rows based on radio selection
-    const [rows, setRows] = useState<{option: string; from_price: string}[]>([]);
-    const [currentFurnishingTypes, setCurrentFurnishingTypes] = useState<CustomFurnishingTypeProps[]|CustomDualFurnishingTypeStateProps[]>(furnishingTypes);
+    const [rows, setRows] = useState<{ option: string; from_price: string }[]>([]);
+    const [currentFurnishingTypes, setCurrentFurnishingTypes] = useState<CustomFurnishingTypeProps[] | CustomDualFurnishingTypeStateProps[]>(furnishingTypes);
 
     // useEffect to update furnishingTypes based on radio value
     useEffect(() => {
@@ -76,7 +77,13 @@ function InfoQuickQuote({title, furnishingTypes}: InfoQuickQuoteProps) {
 
     return (
         <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-            <Typography variant="h3" gutterBottom>
+            <Typography
+                variant="h3"
+                gutterBottom
+                sx={{
+                    fontSize: {xs: '2rem', sm: '3rem'}
+                }}
+            >
                 Quick Quote
             </Typography>
             {title === "Roller Blinds" ? (
